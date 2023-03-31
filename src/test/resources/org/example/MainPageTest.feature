@@ -53,3 +53,14 @@ Feature: An example
     Given I am on the main page
     When I click the Istructors button
     Then the page goes down to the Our Instructors
+
+  Scenario: # 9 Positive. Cand apas sageata albastra din dreapta jos din pagina ma duce la inceputul paginii
+    Given I am on the main page
+    When I click the blue arrow from the bottom of the page
+    Then the page move back to the top
+
+    Scenario: # 10 Positive. Cand sunt pe pagina de E
+      Given I am on the course options page
+      When I select the manual tester option
+      And  I click the next button from the course options page
+      Then a payment information page opens

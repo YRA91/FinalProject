@@ -50,6 +50,26 @@ public class MainPage {
     @FindBy(xpath = "//*[@id=\"learn-fundamentals\"]/div/div/div[2]/a")
     private WebElement ReadMoreLearnTheFundamentalsButton;
 
+    // Scenariul 8
+
+    @FindBy(xpath = "//*[@id=\"instructors\"]/div/h2")
+    private WebElement OurInstructors;
+
+    @FindBy(xpath = "//*[@id=\"navmenu\"]/ul/li[3]/a")
+    private WebElement InstructorsButton;
+
+    // Scenariul 9
+
+    @FindBy(xpath = "/html/body/footer/div/a/i")
+    private WebElement ArrowBotton;
+
+    @FindBy(xpath = "/html/body/nav/div/a")
+    private WebElement TheTop;
+
+    @FindBy(xpath = "/html/body/section[8]/div/div/div[1]/h2")
+    private WebElement ContactInfo;
+
+
 
     // mai jos definesc metoda butonului Ex. butonul de Start Enrollment
 
@@ -91,7 +111,16 @@ public class MainPage {
     public WebElement getLearnTheFundamentals(){return this.LearnTheFundamentals;}
 
     // Scenariul 8
+    public String getOurInstructors(){return this.OurInstructors.getText();}
+    public void clickOnInstructorsButton(){this.InstructorsButton.click();}
 
-    public String getOurInstructors(){return this.ourInstructors()}
+    // Scenariul 9
+
+    public void clickOnArrowBotton(){this.ArrowBotton.click();}
+    public WebElement getTheTop(){return TheTop;}
+    public WebElement getContactInfo(){return ContactInfo;}
+
+
+
 
 }
